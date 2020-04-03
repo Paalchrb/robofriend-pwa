@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
@@ -22,7 +23,6 @@ const mapDispatchToProps = dispatch => {
     onRequestRobots: () => dispatch(requestRobots())
   };
 };
-
 
 
 class App extends React.Component {
