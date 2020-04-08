@@ -38,16 +38,19 @@ class App extends React.Component {
 
     if(error) {
       return <h1>Error: {error.message}</h1>
-    }
-    else if (isPending) {
-      return <h1>Loading...</h1>
     } else {
       return (
         <main>
           <h1>RoboFriends</h1>
           <SearchBox searchChange={onSearchChange}/>
           <Scroll>
-            <CardList robots={filteredRobots} />
+            {
+              isPending ? (
+                <h1>Loading...</h1> 
+              ) : (
+              <CardList robots={filteredRobots} />
+              )
+            }
           </Scroll>
         </main>
       );
