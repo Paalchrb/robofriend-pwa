@@ -37,7 +37,15 @@ class App extends React.Component {
     });
 
     if(error) {
-      return <h1>Error: {error.message}</h1>
+      return (
+        <main>
+          <h1>RoboFriends</h1>
+          <SearchBox searchChange={onSearchChange}/>
+          <Scroll>
+            <h1>Error: {error.message}</h1>
+          </Scroll>
+        </main> 
+      );
     } else {
       return (
         <main>
