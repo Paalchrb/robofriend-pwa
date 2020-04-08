@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render CardList component 1`] = `
+<div
+  className="container"
+>
+  <Card
+    email="hole@gmail.com"
+    id={1}
+    key="1"
+    name="Harry Hole"
+  />
+</div>
+`;
